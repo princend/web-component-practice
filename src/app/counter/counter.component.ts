@@ -12,7 +12,7 @@ export class CounterComponent implements OnInit {
   @Input() counter: number;
   @Output() counterChange = new EventEmitter();
 
-  constructor(private counterService: CounterService) { }
+  constructor(public counterService: CounterService) { }
 
   ngOnInit() {
     this.counterService.setCounter(this.counter)
